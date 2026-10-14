@@ -1,0 +1,148 @@
+/* =====================================================
+   Vol Colibri - Feuille de style unique pour tout le site
+   ===================================================== */
+
+/* ---------- Réglages généraux ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* ---------- Fonds (un par ambiance) ---------- */
+.fond-ciel {
+    background: linear-gradient(#2b8fe8, #bfe3ff);
+}
+
+.fond-hangar {
+    background: linear-gradient(#3b3b3b, #8a7a62);
+}
+
+.fond-montagne {
+    background: linear-gradient(#34495e, #95a5a6);
+}
+
+.fond-orage {
+    background: linear-gradient(#1b1b2f, #4a4e69);
+}
+
+.fond-mer {
+    background: linear-gradient(#0077b6, #90e0ef);
+}
+
+.fond-neige {
+    background: linear-gradient(#a8c8e8, #f4faff);
+}
+
+/* ---------- La carte au centre de la page ---------- */
+.carte {
+    max-width: 650px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    text-align: center;
+    animation: apparition 1s;
+}
+
+.carte h1 {
+    margin-top: 0;
+    font-size: 36px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ---------- Les boutons de choix ---------- */
+.choix {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.bouton {
+    display: block;
+    padding: 14px 20px;
+    background-color: #f5a623;
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid white;
+    border-radius: 30px;
+    transition: transform 0.2s;
+}
+
+.bouton:hover {
+    transform: scale(1.05);
+    background-color: #ffd166;
+}
+
+.bouton i {
+    margin-right: 8px;
+}
+
+.bouton-bleu {
+    background-color: #4dabf7;
+}
+
+.bouton-bleu:hover {
+    background-color: #a5d8ff;
+}
+
+/* ---------- Les fins de l'histoire ---------- */
+.fin {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.fin-bonne {
+    background-color: #2ecc71;
+}
+
+.fin-neutre {
+    background-color: #e67e22;
+}
+
+.fin-mauvaise {
+    background-color: #e74c3c;
+}
+
+/* ---------- Animations ---------- */
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes planer {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.avion {
+    display: inline-block;
+    animation: planer 2s infinite;
+}
